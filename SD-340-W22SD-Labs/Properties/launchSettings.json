@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "SD-340-W22SD-Labs": {
+      "commandName": "Project"
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "environmentVariables": {},
+      "distributionName": ""
+    }
+  }
+}
