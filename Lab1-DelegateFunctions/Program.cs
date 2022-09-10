@@ -12,10 +12,7 @@ MyDelegate PrintNumTimes = (string wordArg, int numArg) =>
 
     for (int i = 0; i < numArg; i++)
     {
-        // wordArg += wordArg.Substring(0, wordArg.Length - i);     this is wrong 1+1 = 2; 2 +2 = 4 .......
-        // string result = ....              already have string in 11 line, so not need it agagin
         result += wordArg;
-
     }
     return result;
 };
@@ -29,9 +26,5 @@ MyDelegate RemoveLettersFromRnd = (string wordArg, int numArg) =>
 
 Console.WriteLine(PrintNumTimes("HelloWorld", 3));
 Console.WriteLine(RemoveLettersFromRnd("HelloWorld", 3));
-
-//MyDelegate del2 = new MyDelegate(RemoveLettersFromRnd);
-//Console.WriteLine(del2);
-
 
 delegate string MyDelegate(string word, int num);
