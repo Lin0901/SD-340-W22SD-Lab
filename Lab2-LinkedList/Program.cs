@@ -7,11 +7,12 @@
 
 LinkedList<int> intList = new LinkedList<int>();
 intList.Add(9);
-LinkedList<string> stringList = new LinkedList<string>();
-stringList.Add("one");
+intList.Add(2);
+intList.Add(8);
+intList.Add(0);
 
-
-
+intList.PrintList();
+intList.Print();
 
 class LinkedList<T>   // LinkedList<T> class will need to be a generic class
 {
@@ -19,7 +20,7 @@ class LinkedList<T>   // LinkedList<T> class will need to be a generic class
     {
         public T Data { get; set; }  // Each Node has two properties: T Data and Node Next.
 
-        public Node next;  // The data is whatever is actually stored on the Node. 
+        public Node next { get; set; }  // The data is whatever is actually stored on the Node. 
         public Node(T x)
         {
             Data = x;
@@ -41,7 +42,6 @@ class LinkedList<T>   // LinkedList<T> class will need to be a generic class
         Node node = new Node(data);
         node.next = head;
         head = node;
-        count++;
     }
     
     public void PrintList()
@@ -53,24 +53,11 @@ class LinkedList<T>   // LinkedList<T> class will need to be a generic class
             runner = runner.next;
         }
     }
-
-    static void Main(string[] args)
+    public void Print()
     {
-        LinkedList<int> intList = new LinkedList<int>();
-        intList.Add(2);
-        intList.Add(3);
-        intList.Add(7);
-        intList.Add(6);
-        intList.Add(1);
-        intList.PrintList();
-
-        LinkedList<string> stringList = new LinkedList<string>();
-        stringList.Add("three");
-        stringList.Add("ten");
-        stringList.Add("nine");
-        stringList.Add("two");
-
+        Node node = head;
+        Console.WriteLine(node.Data);
     }
-
-
 }
+
+
