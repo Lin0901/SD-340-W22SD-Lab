@@ -2,6 +2,7 @@
 {
     public class Direction
     {
+        public int Id { get; set; }
         public enum DirectionEnum
         {
             North,
